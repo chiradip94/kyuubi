@@ -146,7 +146,7 @@ abstract class TFrontendService(name: String)
     val realUser: String =
       ServiceUtils.getShortName(authFactory.getRemoteUser.getOrElse(req.getUsername))
     */
-    val realUser: String = 
+    val realUser: String =
       authFactory.getRemoteUser.getOrElse(req.getUsername)
     val sessionUser =
       if (req.getConfiguration == null) {
