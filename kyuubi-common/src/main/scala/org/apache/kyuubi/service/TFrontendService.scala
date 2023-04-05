@@ -142,10 +142,6 @@ abstract class TFrontendService(name: String)
    * The session user is the proxy user if proxy user is provided, otherwise is the real user.
    */
   protected def getRealUserAndSessionUser(req: TOpenSessionReq): (String, String) = {
-    /*
-    val realUser: String =
-      ServiceUtils.getShortName(authFactory.getRemoteUser.getOrElse(req.getUsername))
-    */
     val realUser: String =
       authFactory.getRemoteUser.getOrElse(req.getUsername)
     val sessionUser =
